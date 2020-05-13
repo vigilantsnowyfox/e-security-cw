@@ -6,16 +6,18 @@ impl = DryGascon.DryGascon128().instance()
 
 from drysponge.aead import aead
 ####
-
 #Added by Bruno
 import time
 start=time.time()
 print("Time started:")
 print(start)
 for x in range(1,1001):
-	#Run AEAD as per original code
+####
 	aead(impl)
 
+####
+#Added by Bruno
 print("Looped: ", x)
 end=time.time()
 print("Total time",(end-start))
+####

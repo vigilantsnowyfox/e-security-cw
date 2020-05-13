@@ -4,15 +4,19 @@ from drysponge.drygascon import DryGascon
 impl = DryGascon.DryGascon128().instance()
 
 from drysponge.hash import hash
+####
 #Added by Bruno
 import time
 start=time.time()
 print("Time started:")
 print(start)
 for x in range(1,10001):
-        #Run hash as per original code
+####
 	hash(impl)
 
+####
+#Added by Bruno
 print("Looped: ", x)
 end=time.time()
 print("Total time",(end-start))
+####
