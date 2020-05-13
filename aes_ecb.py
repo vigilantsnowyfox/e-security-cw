@@ -36,19 +36,37 @@ if __name__ == '__main__':
     cipher = AESCipher(key)
 
     plaintext = '542#1504891440039'
+####
+#Added by Bruno
     start=time.time()
-    print("Time started:")
+    print("Time started (enc):")
     print(start)
     for x in range(1,1001):
+####    
         encrypted = cipher.encrypt(plaintext)
+####
+#Added by Bruno
     print("Looped: ", x)
     end=time.time()
-    print("Total time",(end-start))
-
+    print("Total time enc: ",(end-start))
+####
     print('Encrypted: %s' % encrypted)
     ciphertext = '5bgJqIqFuT8ACuvT1dz2Bj5kx9ZAIkODHWRzuLlfYV0='
     assert encrypted == ciphertext
 
-    decrypted = cipher.decrypt(encrypted)
+#Added by Bruno
+    start=time.time()
+    print("Time started (dec):")
+    print(start)
+    for x in range(1,1001):
+####
+        decrypted = cipher.decrypt(encrypted)
+####
+#Added by Bruno
+    print("Looped: ", x)
+    end=time.time()
+    print("Total time dec: ",(end-start))
+####
+
     print('Decrypted: %s' % decrypted)
     assert decrypted == plaintext

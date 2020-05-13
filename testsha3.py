@@ -7,10 +7,12 @@ import time
 start=time.time()
 print("Time started:")
 print(start)
-for x in range(1,10001):
+for x in range(1,1001):
 	s=sha3.sha3_224(data.encode('utf-8')).hexdigest()
-#	print(s)
 
 print("Looped: ", x)
 end=time.time()
 print("Total time",(end-start))
+
+#print(s)
+
